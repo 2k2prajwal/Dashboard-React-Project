@@ -1,0 +1,173 @@
+/* Container for the whole dashboard layout */
+.dashboard-container {
+  /* padding-left: 30px; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Header containing the "Dashboard" title */
+.dashboard-header {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 80px;
+}
+
+
+.dashboard-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fafafa;
+  overflow-y: auto;
+}
+
+.dashboard-content-with-sidebar {
+  margin-left: 250px;
+}
+
+.charts-row {
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px; 
+}
+
+
+
+/* .sales-vs-orders-chart {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 0;
+} */
+
+
+.portion-of-sales-chart,
+.sales-vs-orders-chart {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 0; /* Ensures flexbox works properly with overflow */
+}
+
+
+.recharts-tooltip-wrapper {
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Axis labels */
+.recharts-cartesian-axis-tick {
+  font-size: 12px;
+  color: #666666;
+}
+
+/* Line styles */
+.line-orders {
+  stroke: #ff7300;
+  stroke-width: 2;
+}
+
+.line-sales {
+  stroke: #387908;
+  stroke-width: 2;
+}
+
+/* Pie chart slice colors */
+.pie-woocommerce {
+  fill: #FF6F61;
+}
+
+.pie-shopify {
+  fill: #00C49F;
+}
+
+/* Pie chart labels */
+.recharts-pie-label-text {
+  font-size: 14px;
+  font-weight: bold;
+  fill: #333333;
+}
+
+.dashboard-sidebar {
+  width: 250px; 
+  position: fixed;
+  left: 0;
+  top: 20px;
+  bottom: 0;
+  background-color: #ffffff; 
+  color: #000000; 
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 60px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-sidebar ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.dashboard-sidebar li:hover {
+  background-color: #d8d1d1; 
+  color: blue;
+}
+
+.dashboard-sidebar img {
+  width: 20px; 
+  height: 20px;
+  margin-right: 10px; 
+}
+
+.dashboard-sidebar span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.dashboard-sidebar li.active {
+  background-color: #444444; 
+}
+
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+      width: 200px; 
+  }
+
+  .dashboard-sidebar li {
+      padding: 10px 15px; 
+  }
+}
